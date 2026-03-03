@@ -28,10 +28,27 @@ export const Hero = () => {
             <Sparkles size={14} className="text-white/80" />
             <span>Islamabad's Premier Grooming Destination</span>
           </div>
-          <h1 className="text-5xl sm:text-6xl md:text-8xl font-serif font-bold leading-tight">
-            Crafting Your <br />
-            <span className="text-white italic">Signature Look</span>
-          </h1>
+          <div className="flex justify-center my-8 md:my-12">
+            <div className="inline-flex flex-col items-center justify-center border border-white/80 p-4 md:p-6 lg:p-8">
+              <span className="text-5xl sm:text-6xl md:text-8xl lg:text-9xl font-serif tracking-[0.2em] leading-none text-white font-light">
+                JACKSON'S
+              </span>
+              <div className="flex items-center w-full mt-3 md:mt-4 lg:mt-5 opacity-80">
+                <div className="h-[1px] md:h-[2px] bg-white flex-grow"></div>
+                <span className="text-sm sm:text-base md:text-xl lg:text-2xl font-serif tracking-[0.3em] mx-4 md:mx-6 lg:mx-8 leading-none flex items-center text-white font-light">
+                  SALON
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="ml-2 md:ml-3 lg:ml-4 w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 lg:w-10 lg:h-10">
+                    <circle cx="6" cy="6" r="3"></circle>
+                    <circle cx="6" cy="18" r="3"></circle>
+                    <line x1="20" y1="4" x2="8.12" y2="15.88"></line>
+                    <line x1="14.47" y1="14.48" x2="20" y2="20"></line>
+                    <line x1="8.12" y1="8.12" x2="12" y2="12"></line>
+                  </svg>
+                </span>
+                <div className="h-[1px] md:h-[2px] bg-white flex-grow"></div>
+              </div>
+            </div>
+          </div>
           <p className="max-w-2xl mx-auto text-base md:text-lg text-white/60 font-light leading-relaxed">
             Experience the pinnacle of luxury grooming. From precision cuts to premium treatments, 
             Jackson's Salon f11 delivers excellence at every location.
