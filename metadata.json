@@ -1,7 +1,0 @@
-{
-  "name": "Jackson's Salon f11",
-  "description": "Premium multi-location high-end salon in Islamabad featuring luxury hair and grooming services.",
-  "requestFramePermissions": [
-    "geolocation"
-  ]
-}
