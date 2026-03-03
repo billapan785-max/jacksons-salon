@@ -61,31 +61,47 @@ export const Navbar = () => {
 
   return (
     <>
-      <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${scrolled || isMobileMenuOpen ? 'bg-black py-4 border-b border-white/10' : 'bg-transparent py-6'}`}>
-        <div className="container mx-auto px-6 flex justify-between items-center">
-          <Link to="/" className="text-xl md:text-2xl font-serif font-bold tracking-widest text-white">
-            JACKSON'S
+      <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${scrolled || isMobileMenuOpen ? 'bg-black py-3 md:py-4 border-b border-white/10' : 'bg-transparent py-4 md:py-6'}`}>
+        <div className="container mx-auto px-4 md:px-6 flex justify-between items-center gap-2 md:gap-4">
+          <Link to="/" className="flex flex-col items-center justify-center border border-white/80 p-1 md:p-1.5 hover:bg-white/5 transition-colors shrink-0">
+            <span className="text-sm sm:text-base md:text-xl font-serif tracking-[0.2em] leading-none text-white font-light">
+              JACKSON'S
+            </span>
+            <div className="flex items-center w-full mt-1 opacity-80">
+              <div className="h-[1px] bg-white flex-grow"></div>
+              <span className="text-[6px] sm:text-[7px] md:text-[9px] font-serif tracking-[0.3em] mx-1 md:mx-1.5 leading-none flex items-center text-white font-light">
+                SALON
+                <svg xmlns="http://www.w3.org/2000/svg" width="6" height="6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="ml-0.5 md:ml-1 md:w-2.5 md:h-2.5">
+                  <circle cx="6" cy="6" r="3"></circle>
+                  <circle cx="6" cy="18" r="3"></circle>
+                  <line x1="20" y1="4" x2="8.12" y2="15.88"></line>
+                  <line x1="14.47" y1="14.48" x2="20" y2="20"></line>
+                  <line x1="8.12" y1="8.12" x2="12" y2="12"></line>
+                </svg>
+              </span>
+              <div className="h-[1px] bg-white flex-grow"></div>
+            </div>
           </Link>
           
           {/* Desktop Links */}
-          <div className="hidden md:flex space-x-8 text-sm uppercase tracking-widest font-medium">
+          <div className="hidden lg:flex space-x-6 xl:space-x-8 text-sm uppercase tracking-widest font-medium">
             {navLinks.map((link) => renderLink(link))}
           </div>
 
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-2 md:space-x-4 shrink-0">
             <GlassButton 
               onClick={() => window.dispatchEvent(new CustomEvent('open-booking'))}
-              className="px-4 md:px-6 py-2 md:py-3 bg-white/10 text-white border border-white/20 font-bold text-[10px] md:text-xs uppercase tracking-widest rounded-full"
+              className="px-3 md:px-6 py-1.5 md:py-3 bg-white/10 text-white border border-white/20 font-bold text-[9px] md:text-xs uppercase tracking-widest rounded-full whitespace-nowrap"
             >
               Book Now
             </GlassButton>
             
             {/* Mobile Menu Toggle */}
             <GlassButton 
-              className="md:hidden text-white p-1"
+              className="lg:hidden text-white p-1"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
-              {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+              {isMobileMenuOpen ? <X size={20} className="md:w-6 md:h-6" /> : <Menu size={20} className="md:w-6 md:h-6" />}
             </GlassButton>
           </div>
         </div>
