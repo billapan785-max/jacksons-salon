@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", serif;
+  
+  --color-gold: #FFFFFF;
+  --color-gold-light: #E5E5E5;
+  --color-gold-dark: #737373;
+}
+
+@layer base {
+  body {
+    @apply bg-[#050505] text-white selection:bg-white selection:text-black;
+  }
+}
+
+.gold-gradient {
+  background: linear-gradient(135deg, rgba(115, 115, 115, 0.8) 0%, rgba(255, 255, 255, 0.9) 50%, rgba(229, 229, 229, 0.8) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.gold-text {
+  background: linear-gradient(135deg, #737373 0%, #FFFFFF 50%, #E5E5E5 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.3));
+}
+
+.gold-border {
+  border-image: linear-gradient(135deg, #737373 0%, #FFFFFF 50%, #E5E5E5 100%) 1;
+}
+
+.glass-card {
+  background: #111111;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.glass-card-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-card-hover:hover {
+  background: #1a1a1a;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 12px 48px 0 rgba(0, 0, 0, 0.5);
+  transform: translateY(-4px);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.02);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
