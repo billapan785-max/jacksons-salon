@@ -1,2 +1,20 @@
-# jacksons-salon
-Premium web platform for Jackson's Salon. Features include a luxury service menu, dynamic 'Our Vibes' Instagram gallery, and a fully responsive UI. Developed using modern web tech and integrated with Firebase for high performance.
+<div align="center">
+<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+</div>
+
+# Run and deploy your AI Studio app
+
+This contains everything you need to run your app locally.
+
+View your app in AI Studio: https://ai.studio/apps/f6d96a5f-c1e1-463e-a689-ebd89a151faa
+
+## Run Locally
+
+**Prerequisites:**  Node.js
+
+
+1. Install dependencies:
+   `npm install`
+2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
+3. Run the app:
+   `npm run dev`
