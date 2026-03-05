@@ -70,7 +70,7 @@ export const Navbar = () => {
             <div className="flex items-center w-full mt-1 opacity-80">
               <div className="h-[1px] bg-white flex-grow"></div>
               <span className="text-[6px] sm:text-[7px] md:text-[9px] font-serif tracking-[0.3em] mx-1 md:mx-1.5 leading-none flex items-center text-white font-light">
-                SALON
+                
                 <svg xmlns="http://www.w3.org/2000/svg" width="6" height="6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="ml-0.5 md:ml-1 md:w-2.5 md:h-2.5">
                   <circle cx="6" cy="6" r="3"></circle>
                   <circle cx="6" cy="18" r="3"></circle>
