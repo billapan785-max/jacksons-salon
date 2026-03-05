@@ -35,7 +35,7 @@ export const Hero = () => {
               </span>
               <div className="flex items-center w-full mt-3 md:mt-4 lg:mt-5 opacity-80">
                 <div className="h-[1px] md:h-[2px] bg-white flex-grow"></div>
-                <span className="text-sm sm:text-base md:text-xl lg:text-2xl font-serif tracking-[0.3em] mx-4 md:mx-6 lg:mx-8 leading-none flex items-center text-white font-light">
+                <span className="text-sm sm:text-base md:text-xl lg:text-2xl font-serif tracking-[0.3em] ml-4 md:ml-6 lg:ml-8 leading-none flex items-center text-white font-light">
                   SALON
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="ml-2 md:ml-3 lg:ml-4 w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 lg:w-10 lg:h-10">
                     <circle cx="6" cy="6" r="3"></circle>
@@ -45,7 +45,6 @@ export const Hero = () => {
                     <line x1="8.12" y1="8.12" x2="12" y2="12"></line>
                   </svg>
                 </span>
-                <div className="h-[1px] md:h-[2px] bg-white flex-grow"></div>
               </div>
             </div>
           </div>
