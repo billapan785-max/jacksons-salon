@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
-import { X, Check, ArrowRight, MessageCircle } from 'lucide-react';
+import { X, Check, ArrowRight, MessageCircle, Phone } from 'lucide-react';
 import { Location, Service } from '../constants';
 import { GlassButton } from './GlassButton';
 import { useData } from '../DataContext';
@@ -47,6 +47,11 @@ export const BookingModal = () => {
     
     window.open(`https://wa.me/${selectedLocation.whatsapp}?text=${message}`, '_blank');
     setIsOpen(false);
+  };
+
+  const handleCall = () => {
+    if (!selectedLocation) return;
+    window.location.href = `tel:${selectedLocation.whatsapp}`;
   };
 
   if (!isOpen) return null;
@@ -199,18 +204,28 @@ export const BookingModal = () => {
                 ))}
               </div>
 
-              <div className="pt-4 md:pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
-                <div className="text-center sm:text-left">
-                  <p className="text-[10px] uppercase tracking-widest text-white/50">Estimated Total</p>
-                  <p className="text-xl md:text-2xl font-serif font-bold text-gold">Rs. {calculateTotal()}</p>
+              <div className="pt-4 md:pt-6 border-t border-white/10 flex flex-col space-y-4">
+                <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+                  <div className="text-center sm:text-left">
+                    <p className="text-[10px] uppercase tracking-widest text-white/50">Estimated Total</p>
+                    <p className="text-xl md:text-2xl font-serif font-bold text-gold">Rs. {calculateTotal()}</p>
+                  </div>
+                  <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
+                    <GlassButton 
+                      onClick={handleCall}
+                      className="w-full sm:w-auto px-6 md:px-8 py-3 md:py-4 border border-gold/50 text-gold font-bold text-sm uppercase tracking-widest rounded-full flex items-center justify-center hover:bg-gold/10 transition-all"
+                    >
+                      Call Now <Phone size={16} className="ml-2" />
+                    </GlassButton>
+                    <GlassButton 
+                      onClick={handleConfirm}
+                      disabled={selectedServices.length === 0}
+                      className="w-full sm:w-auto px-6 md:px-8 py-3 md:py-4 gold-gradient text-black font-bold text-sm uppercase tracking-widest rounded-full disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
+                    >
+                      WhatsApp <MessageCircle size={16} className="ml-2" />
+                    </GlassButton>
+                  </div>
                 </div>
-                <GlassButton 
-                  onClick={handleConfirm}
-                  disabled={selectedServices.length === 0}
-                  className="w-full sm:w-auto px-6 md:px-8 py-3 md:py-4 gold-gradient text-black font-bold text-sm uppercase tracking-widest rounded-full disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
-                >
-                  Confirm Booking <MessageCircle size={16} className="ml-2" />
-                </GlassButton>
               </div>
             </div>
           )}
