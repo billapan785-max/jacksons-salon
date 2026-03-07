@@ -29,13 +29,12 @@ export const Hero = () => {
             <span>Islamabad's Premier Grooming Destination</span>
           </div>
           <div className="flex justify-center my-8 md:my-12">
-            <div className="inline-flex flex-col items-center justify-center border border-white/80 p-4 md:p-6 lg:p-8">
+            <div className="inline-flex flex-col items-center justify-center p-4 md:p-6 lg:p-8">
               <span className="text-5xl sm:text-6xl md:text-8xl lg:text-9xl font-serif tracking-[0.2em] leading-none text-white font-light">
                 JACKSON'S
               </span>
-              <div className="flex items-center w-full mt-3 md:mt-4 lg:mt-5 opacity-80">
-                <div className="h-[1px] md:h-[2px] bg-white flex-grow"></div>
-                <span className="text-sm sm:text-base md:text-xl lg:text-2xl font-serif tracking-[0.3em] ml-4 md:ml-6 lg:ml-8 leading-none flex items-center text-white font-light">
+              <div className="flex items-center justify-end w-full mt-3 md:mt-4 lg:mt-5 opacity-80">
+                <span className="text-sm sm:text-base md:text-xl lg:text-2xl font-serif tracking-[0.3em] leading-none flex items-center text-white font-light">
                   SALON
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="ml-2 md:ml-3 lg:ml-4 w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 lg:w-10 lg:h-10">
                     <circle cx="6" cy="6" r="3"></circle>
