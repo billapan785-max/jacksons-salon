@@ -9,13 +9,12 @@ export const Footer = () => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 mb-12">
           <div className="col-span-1 md:col-span-2 space-y-6">
-            <div className="inline-flex flex-col items-center justify-center border border-white/80 p-2 md:p-3">
+            <div className="inline-flex flex-col items-center justify-center p-2 md:p-3">
               <span className="text-2xl md:text-4xl font-serif tracking-[0.2em] leading-none text-white font-light">
                 JACKSON'S
               </span>
-              <div className="flex items-center w-full mt-1.5 md:mt-2 opacity-80">
-                <div className="h-[1px] bg-white flex-grow"></div>
-                <span className="text-[10px] md:text-[12px] font-serif tracking-[0.3em] mx-2 md:mx-3 leading-none flex items-center text-white font-light">
+              <div className="flex items-center justify-end w-full mt-1.5 md:mt-2 opacity-80">
+                <span className="text-[10px] md:text-[12px] font-serif tracking-[0.3em] leading-none flex items-center text-white font-light">
                   SALON
                   <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="ml-1.5 md:w-4 md:h-4">
                     <circle cx="6" cy="6" r="3"></circle>
@@ -25,7 +24,6 @@ export const Footer = () => {
                     <line x1="8.12" y1="8.12" x2="12" y2="12"></line>
                   </svg>
                 </span>
-                <div className="h-[1px] bg-white flex-grow"></div>
               </div>
             </div>
             <p className="text-white/40 max-w-md leading-relaxed">
@@ -82,7 +80,10 @@ export const Footer = () => {
         </div>
         
         <div className="pt-12 border-t border-white/5 text-center text-xs text-white/30 uppercase tracking-[0.2em]">
-          &copy; {new Date().getFullYear()} Jackson's Salon f11. All Rights Reserved.
+          <div>&copy; {new Date().getFullYear()} Jackson's Salon f11. All Rights Reserved.</div>
+          <div className="mt-4 opacity-60 normal-case tracking-normal">
+            Developed by <span className="text-white font-medium">USAMA</span> | <a href="tel:03170317751" className="hover:text-white transition-colors">03170317751</a>
+          </div>
         </div>
       </div>
     </footer>
